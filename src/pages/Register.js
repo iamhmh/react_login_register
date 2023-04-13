@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 function Register(){
@@ -129,15 +130,19 @@ function Register(){
                                             </div>
                                         }
                                     </div>
-                                    {/* Submit */}
+                                    {/* Register */}
                                     <div className="d-grid gap-2">
                                         <button
                                             type="submit"
                                             className="btn btn-primary btn-block"
                                             disabled={isSubmitting}
                                         >
-                                            {isSubmitting ? 'Loading...' : 'Register'}
+                                            Register
                                         </button>
+                                        <p className="text-center">
+                                            Already have an account? 
+                                            <Link to="/login">Login</Link>
+                                        </p>
                                     </div>
                                 </form>
                             </div>
