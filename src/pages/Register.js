@@ -54,23 +54,78 @@ function Register(){
                             <div className="card-body">
                                 <form onSubmit={(e)=>registerAction(e)}>
                                     <div className="mb-3">
-                                    <label htmlFor="name" className="form-label">Name</label>
-                                    <input 
-                                        type="text" 
-                                        className="form-control" 
-                                        id="name" 
-                                        name="name" 
-                                        value={name} 
-                                        onChange={(e)=>setName(e.target.value)} 
-                                    />
-                                    {validationErrors.name !== undefined &&
-                                        <div className="flex flex-col">
-                                            <small className="alert alert-danger">
-                                                {validationErrors.name[0]}
-                                            </small>
-                                        </div>
-                                    }
+                                        <label htmlFor="name" className="form-label">Name</label>
+                                        <input 
+                                            type="text" 
+                                            className="form-control" 
+                                            id="name" 
+                                            name="name" 
+                                            value={name} 
+                                            onChange={(e)=>setName(e.target.value)} 
+                                        />
+                                        {validationErrors.name !== undefined &&
+                                            <div className="flex flex-col">
+                                                <small className="alert alert-danger">
+                                                    {validationErrors.name[0]}
+                                                </small>
+                                            </div>
+                                        }
                                     </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="email" className="form-label">Email address</label>
+                                        <input
+                                            type="email"
+                                            className="form-control"
+                                            id="email"
+                                            name="email"
+                                            value={email}
+                                            onChange={(e)=>setEmail(e.target.value)}
+                                        />
+                                        {validationErrors.email !== undefined &&
+                                            <div className="flex flex-col">
+                                                <small className="alert alert-danger">
+                                                    {validationErrors.email[0]}
+                                                </small>
+                                            </div>
+                                        }
+                                    </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="password" className="form-label">Password</label>
+                                        <input
+                                            type="password"
+                                            className="form-control"
+                                            id="password"
+                                            name="password"
+                                            value={password}
+                                            onChange={(e)=>setPassword(e.target.value)}
+                                        />
+                                        {validationErrors.password !== undefined &&
+                                            <div className="flex flex-col">
+                                                <small className="alert alert-danger">
+                                                    {validationErrors.password[0]}
+                                                </small>
+                                            </div>
+                                        }
+                                    </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="password_confirmation" className="form-label">Password Confirmation</label>
+                                        <input
+                                            type="password"
+                                            className="form-control"
+                                            id="password_confirmation"
+                                            name="password_confirmation"
+                                            value={password_confirmation}
+                                            onChange={(e)=>setPasswordConfirmation(e.target.value)}
+                                        />
+                                        {validationErrors.password_confirmation !== undefined &&
+                                            <div className="flex flex-col">
+                                                <small className="alert alert-danger">
+                                                    {validationErrors.password_confirmation[0]}
+                                                </small>
+                                            </div>
+                                        }
+                                    </div>
+                                    
                                 </form>
                             </div>
                         </div>
