@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+import Layout from '../components/layout';
 
 
 function Register(){
@@ -45,7 +46,7 @@ function Register(){
     };
 
     return (
-        <layout>
+        <Layout>
             <div className="container">
                 <div className="row justify-content-md-center mt-5">
                     <div className="col-md-6">
@@ -149,7 +150,7 @@ function Register(){
                     </div>
                 </div>
             </div>
-        </layout>
+        </Layout>
     );
 
 }
