@@ -53,6 +53,7 @@ function Register(){
                             <div className="card-header">Register</div>
                             <div className="card-body">
                                 <form onSubmit={(e)=>registerAction(e)}>
+                                    {/* Name */}
                                     <div className="mb-3">
                                         <label htmlFor="name" className="form-label">Name</label>
                                         <input 
@@ -71,6 +72,7 @@ function Register(){
                                             </div>
                                         }
                                     </div>
+                                    {/* Email */}
                                     <div className="mb-3">
                                         <label htmlFor="email" className="form-label">Email address</label>
                                         <input
@@ -89,6 +91,7 @@ function Register(){
                                             </div>
                                         }
                                     </div>
+                                    {/* Password */}
                                     <div className="mb-3">
                                         <label htmlFor="password" className="form-label">Password</label>
                                         <input
@@ -107,6 +110,7 @@ function Register(){
                                             </div>
                                         }
                                     </div>
+                                    {/* Password Confirmation */}
                                     <div className="mb-3">
                                         <label htmlFor="password_confirmation" className="form-label">Password Confirmation</label>
                                         <input
@@ -125,9 +129,16 @@ function Register(){
                                             </div>
                                         }
                                     </div>
-                                    <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
-                                        {isSubmitting ? 'Loading...' : 'Register'}
-                                    </button>
+                                    {/* Submit */}
+                                    <div className="d-grid gap-2">
+                                        <button
+                                            type="submit"
+                                            className="btn btn-primary btn-block"
+                                            disabled={isSubmitting}
+                                        >
+                                            {isSubmitting ? 'Loading...' : 'Register'}
+                                        </button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
