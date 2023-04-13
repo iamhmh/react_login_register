@@ -125,7 +125,9 @@ function Register(){
                                             </div>
                                         }
                                     </div>
-                                    
+                                    <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+                                        {isSubmitting ? 'Loading...' : 'Register'}
+                                    </button>
                                 </form>
                             </div>
                         </div>
